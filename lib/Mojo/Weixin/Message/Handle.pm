@@ -309,7 +309,7 @@ sub _parse_sync_data {
                     $msg->{receiver_id} = $e->{ToUserName};
                 }
             }
-            elsif($e->{ToUserName} eq $self->user->id || $e->{ToUserName} == '/'){#接收的消息
+            elsif($e->{ToUserName} eq $self->user->id || $e->{ToUserName} eq '/'){#接收的消息
                 $msg->{class} = "recv";
                 $msg->{receiver_id} = $self->user->id;
                 $msg->{type} = "group_message";
